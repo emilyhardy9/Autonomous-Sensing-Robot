@@ -35,4 +35,4 @@ robot.source = None
 robot.close()
 left_sensor.close()
 right_sensor.close()
-
+front_sensor.close()
