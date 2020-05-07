@@ -1,3 +1,4 @@
+from time import sleep
 from gpiozero import Robot, LineSensor
 
 robot = Robot(left=(7, 8), right=(9, 10))
@@ -6,6 +7,7 @@ right_sensor = LineSensor(4)
 front_sensor = LineSensor(27)
 
 speed = 0.5
+
 
 def motor_speed():
     while True:
@@ -25,7 +27,8 @@ def motor_speed():
             left_mot = -1
             right_mot = 0.9
 
-        yield (right_mot, left_mot)
+        yield right_mot, left_mot
+
 
 robot.source = motor_speed()
 
